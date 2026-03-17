@@ -9,13 +9,17 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
     <div class="nav-logo" onclick="showPage('home')">
         <img src="logo.jpeg" alt="Logo" onerror="this.style.display='none'">
         <span>Nature's Soul Chronicles</span>
     </div>
-    <div class="nav-links">
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
         <a onclick="showPage('home')" class="nav-item">Home</a>
         <a onclick="showPage('land')" class="nav-item">Land</a>
         <a onclick="showPage('water')" class="nav-item">Water</a>

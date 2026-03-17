@@ -30,3 +30,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var logo = document.querySelector('.nav-logo');
     if (logo) logo.addEventListener('click', function() { showPage('home'); });
 });
+// Hamburger menu toggle
+var hamburger = document.getElementById('hamburger');
+var navLinks = document.getElementById('nav-links');
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+    });
+}
+
+// Close menu when a nav item is clicked
+document.querySelectorAll('.nav-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+        if (navLinks) navLinks.classList.remove('open');
+    });
+});
