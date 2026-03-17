@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature's Soul Chronicles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-logo" onclick="showPage('home')">
+        <img src="logo.jpeg" alt="Logo" onerror="this.style.display='none'">
+        <span>Nature's Soul Chronicles</span>
+    </div>
+    <div class="nav-links">
+        <a onclick="showPage('home')" class="nav-item">Home</a>
+        <a onclick="showPage('land')" class="nav-item">Land</a>
+        <a onclick="showPage('water')" class="nav-item">Water</a>
+        <a onclick="showPage('forest')" class="nav-item">Forests</a>
+        <a onclick="showPage('sky')" class="nav-item">Sky</a>
+        <a onclick="showPage('gallery')" class="nav-item">Gallery</a>
+        <a onclick="showPage('about')" class="nav-item">About</a>
+    </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="page-home" class="detail-view" style="display:block;">    
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">&#10022; India's Natural Heritage &#10022; </span>        
+            <h1 class="hero-title">Nature's <em>Soul</em><br>Chronicles</h1>
+            <p class="hero-tagline">Where the Nature Speaks and Wonders Begin</p>
+            <button class="hero-cta" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">Begin Exploring &#8595;</button>
+        </div>
+        <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+    </section>
+
+    <section class="categories-section" id="categories">
+        <div class="section-header">
+            <div class="section-label">Explore India's Nature</div>
+            <h2 class="section-title">Four <em>Realms</em> of Wonder</h2>
+        </div>
+        <div class="main-grid">
+
+            <div class="category-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Pangong_tso.jpg/800px-Pangong_tso.jpg" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800'" alt="Land Wonders India">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><polyline points="3,20 7,10 10,14 14,4 17,10 21,6"/><line x1="3" y1="20" x2="21" y2="20"/></svg></div>
+                    <h3>Land Wonders</h3>
+                    <p>Mountains, Valleys &amp; Deserts of India</p>
+                    <button class="explore-btn" onclick="showPage('land')">Discover →</button>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Radhanagar_Beach_in_the_Andaman_Islands.jpg/800px-Radhanagar_Beach_in_the_Andaman_Islands.jpg" onerror="this.src='https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800'" alt="Water Wonders India">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C12 2 4 10 4 15a8 8 0 0016 0C20 10 12 2 12 2z"/></svg></div>
+                    <h3>Water Wonders</h3>
+                    <p>Oceans, Rivers &amp; Waterfalls of India</p>
+                    <button class="explore-btn" onclick="showPage('water')">Discover →</button>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Walking_tiger_female.jpg/800px-Walking_tiger_female.jpg" onerror="this.src='https://images.unsplash.com/photo-1448375240586-882707db888b?w=800'" alt="Forests Wildlife India">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2L8 9H4l4 4-2 7 6-4 6 4-2-7 4-4h-4z"/><line x1="12" y1="22" x2="12" y2="16"/></svg></div>
+                    <h3>Forests &amp; Wildlife</h3>
+                    <p>Forests, Animals &amp; Wildlife Species</p>
+                    <button class="explore-btn" onclick="showPage('forest')">Discover →</button>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Light_painting_with_Milkyway_from_Spiti_%2848314647581%29.jpg/800px-Light_painting_with_Milkyway_from_Spiti_%2848314647581%29.jpg" onerror="this.src='https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800'" alt="Sky Space India">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg></div>
+                    <h3>Sky &amp; Space</h3>
+                    <p>Stars, Auroras &amp; Cosmos</p>
+                    <button class="explore-btn" onclick="showPage('sky')">Discover →</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- main-grid ends here — subcategory panel is OUTSIDE -->
+    </section>
+
+</div>
+<!-- END page-home -->
+
+<!-- LAND PAGE -->
+<div id="page-land" class="detail-view">
+    <div class="container">
+        <h1 class="page-title">Land Wonders of India</h1>
+        <div class="sub-cat-title">1. Mountains &amp; Peaks</div>
+        <div class="info-grid">
+            <div class="item-card">
+                <img src="kangchenjunga_mountain.jpeg" alt="Kangchenjunga">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : March – May &amp; Oct – Nov</span><h3>Kangchenjunga</h3><p>Kangchenjunga is the third highest mountain in the world and its name means “Five Treasures of Snow,” referring to its five snowy peaks. It is known for its huge glaciers, beautiful Himalayan views, and is also considered sacred by the people of Sikkim. The mountain is located in the Eastern Himalayas on the border of Sikkim, India and Nepal.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="nanda_devi_mountain.jpeg" alt="nandadevi">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : May – June &amp; Sept – Oct</span><h3>NandaDevi</h3><p>Nanda Devi is the second highest mountain in India and one of the most beautiful Himalayan peaks. It is surrounded by the Nanda Devi National Park, a UNESCO World Heritage Site known for its rich biodiversity. The mountain is located in Uttarakhand in the Garhwal Himalayas of northern India.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="anamudi_mountain.jpeg" alt="anamudi">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit: Nov – May</span><h3>Anamudi</h3><p>Anamudi is the highest mountain in South India and its name means “Elephant’s Forehead” because the peak looks like an elephant’s head. It is famous for its green hills, cool climate, and rare wildlife like the Nilgiri Tahr. The mountain is located inside Eravikulam National Park in Idukki district of Kerala, India.</p></div>
+            </div>
+        </div>
+        <div class="sub-cat-title">2. Valleys &amp; Plains</div>
+        <div class="info-grid">
+            <div class="item-card">
+                <img src="spiti_valley.jpeg" alt="spiti">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : June – Sept &amp; Nov – April</span><h3>Spiti Valley</h3><p>Spiti Valley is a beautiful high-altitude valley known for its cold desert landscape, snow-covered mountains, ancient monasteries, and peaceful villages. The name “Spiti” means “The Middle Land” because it lies between India and Tibet. It is located in the Himachal Pradesh region of the Himalayas in northern India.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="kullu_valley.jpeg" alt="kullu valley">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : March – June</span><h3>Kullu Valley</h3><p>Kullu Valley is a scenic valley famous for its green hills, apple orchards, rivers, and beautiful Himalayan landscapes. It is often called the “Valley of Gods” because of the many temples and cultural festivals in the region. The valley lies along the Beas River in Himachal Pradesh, India.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="brahmaputra_plain.jpeg" alt="brahmaputra plain">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Nov – March</span><h3>Brahmaputra Plain</h3><p>Brahmaputra Plain is a vast and fertile plain created by the flow of the mighty Brahmaputra River. The region is known for its rich agriculture, wetlands, and diverse wildlife. It is mainly located in the state of Assam in northeastern India and is one of the most important river plains in the country.</p></div>
+            </div>
+        </div>
+        <div class="sub-cat-title">3. Deserts</div>
+        <div class="info-grid">
+            <div class="item-card">
+                <img src="thar_desert.jpeg" alt="thar desert">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Oct – March</span><h3>Thar Desert</h3><p>Thar Desert is one of the largest deserts in Asia and is also known as the Great Indian Desert. It is famous for its golden sand dunes, camel rides, traditional villages, and colorful desert culture. The desert lies mainly in the state of Rajasthan, India.</p></div>
+            </div>
+            <div class="item-card">
+                 <img src="cold_desert_of_ladakh.jpg" alt="cold desert">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Apr – July &amp; Aug – Oct</span><h3>Cold Desert-Ladakh</h3><p>Ladakh is a high-altitude cold desert known for its dramatic mountains, clear blue skies, ancient monasteries, and unique Tibetan culture. The region has very little rainfall and is surrounded by the mighty Himalayas. It is located in the Union Territory of Ladakh, India.</p></div>
+            </div>
+            <div class="item-card">
+                 <img src="rann_of_kutch.jpeg" alt="rann of kutch">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Nov – Feb </span><h3>Rann of Kutch</h3><p>Rann of Kutch is a vast white salt desert famous for its unique landscape and the beautiful Rann Utsav. During the dry season the land turns into a large white salt plain that looks magical under moonlight. It is located in the state of Gujarat, India.</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WATER PAGE -->
+<div id="page-water" class="detail-view">
+    <div class="container">
+        <h1 class="page-title" style="color:var(--ocean)">Water Wonders of India</h1>
+        <div class="sub-cat-title">1. Oceans &amp; Seas</div>
+        <div class="info-grid">
+            <div class="item-card">
+                <img src="indian_ocean.jpg" alt="Indian Ocean">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Nov – Apr &amp; May – Oct</span><h3>Indian Ocean</h3><p>Indian Ocean is the third largest ocean, covering about 20% of the Earth’s water. It is home to vibrant coral reefs, dolphins, sharks, and tropical fish. Many islands like Maldives and Seychelles are located in this ocean.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="arabian_sea.jpg" alt="Arabian Sea">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Oct – March</span><h3>Arabian Sea</h3><p>Arabian Sea is known for its deep blue waters, rich marine life, and busy ports. It is famous for beautiful beaches in Kerala, Goa, and Maharashtra. The sea is also important for trade and fishing.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="bay_of_bengal.jpg" alt="Bay Of Bengal">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Nov – Feb</span><h3>Bay of Bengal</h3><p>The Bay of Bengal is the largest bay in the world, known for warm waters, rich marine life, and the Sundarbans mangrove forest. It touches India, Bangladesh, Myanmar, and the Andaman & Nicobar Islands.</p></div>
+            </div>
+        </div>
+        <div class="sub-cat-title">2. Rivers &amp; Lakes</div>
+        <div class="info-grid">
+            <div class="item-card">
+                <img src="Godavari_River.jpg" alt="Godavari River">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Oct – March</span><h3>Godavari River</h3><p>The Godavari River is the second longest river in India, flowing through Maharashtra, Telangana, Andhra Pradesh, and Odisha. It is known for fertile lands, temples along its banks, and cultural festivals like Kumbh Mela at Nashik.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="Ganga_River.jpg" alt="Ganga River">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Oct – March</span><h3>Ganga River</h3><p>The Ganga River is a sacred river flowing through Uttarakhand, Uttar Pradesh, Bihar, Jharkhand, and West Bengal. It is famous for pilgrimage sites, ghats, and spiritual significance in Hinduism.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="Dal_Lake.jpg" alt="Dal Lake">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Apr – June &amp; Sept – Nov</span><h3>Dal Lake — Kashmir</h3><p>The Dal Lake is a scenic freshwater lake in Srinagar, Kashmir, known for its floating gardens, houseboats, and Shikara rides. It is a popular tourist spot in the Himalayas.</p></div>
+            </div>
+        </div>
+        <div class="sub-cat-title">3. Waterfalls</div>
+        <div class="info-grid">
+            <div class="item-card">
+                <img src="Jog_Falls.jpg" alt="Jog Waterfalls">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Jul – Sept</span><h3>Jog Falls — Karnataka </h3><p>The Jog Falls is one of India’s tallest waterfalls, located in Shimoga district, Karnataka. It is known for its spectacular drop and surrounding lush greenery.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="Dudhsagar_Falls.jpg" alt="Dudhsagar Waterfalls">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Oct – May &amp; June – Sept</span><h3>Dudhsagar Falls — Goa</h3><p>The Dudhsagar Falls is a stunning four-tiered waterfall in Sanguem, Goa, named “Sea of Milk” because of its milky white appearance.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="Nohkalikai_Falls.jpg" alt="Nohkalikai Waterfalls">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Oct – Dec</span><h3>Nohkalikai Falls</h3><p>The Nohkalikai Falls is the tallest plunge waterfall in India, located in Cherrapunji, Meghalaya. It drops dramatically into a deep gorge and is surrounded by lush forests.</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOREST PAGE -->
+<div id="page-forest" class="detail-view">
+    <div class="container">
+        <h1 class="page-title">Forests &amp; Wildlife of India</h1>
+        <div class="sub-cat-title">Types of Forests</div>
+        <div class="info-grid forest-grid">
+            <div class="item-card">
+                <img src="Tropical_Evergreen_Forests.jpeg" alt="Tropical Evergreen Forests">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Oct – March</span><h3>Tropical Evergreen Forests</h3><p>Tropical evergreen forests are dense rainforests that remain green throughout the year because trees do not shed their leaves seasonally. They grow in regions with very high rainfall (usually more than 200 cm annually) and rich biodiversity. In India they are mainly found in the Western Ghats, North-Eastern states such as Assam, and the Andaman & Nicobar Islands.</p></div>
+            </div>
+             <div class="item-card">
+                <img src="Temperate_Forests.jpg" alt="Temperate Forests">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : March – June &amp; Sept – Nov</span><h3>Temperate Forests</h3><p>Temperate forests grow in cooler mountain regions and contain broad-leaf trees, shrubs, and conifers. These forests experience moderate rainfall and distinct seasons. In India they are mainly found in the Himalayan region, especially in Himachal Pradesh, Uttarakhand, and parts of Jammu & Kashmir</p></div>
+            </div>
+            <div class="item-card">
+                <img src="Mangrove_Forests.jpeg" alt="Mangrove Forests">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Nov – March</span><h3>Mangrove Forests</h3><p>Mangrove forests grow in coastal areas where freshwater mixes with seawater and the land is influenced by tides. These forests protect coastlines and support rich wildlife like crocodiles, birds, and fish. The most famous mangrove forest is the Sundarbans in West Bengal at the Ganges delta, while other important mangrove areas include Bhitarkanika (Odisha) and Pichavaram (Tamil Nadu)</p></div>
+            </div>
+            <div class="item-card">
+            <img src="Tropical_Deciduous_Forests.jpeg" alt="Tropical Deciduous Forests">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Nov – March</span><h3>Tropical Deciduous Forests</h3><p>Tropical deciduous forests are also called monsoon forests because trees shed their leaves during the dry season to conserve water. They receive moderate rainfall and are among the most widespread forests in India. These forests occur mainly in central India, the Himalayan foothills, Odisha, Chhattisgarh, and parts of the Deccan Plateau.</p></div>
+            </div>
+        </div>
+        <div class="sub-cat-title">Wildlife Species</div>
+        <div class="info-grid wildlife-grid">
+            <div class="item-card">
+                <img src="Bengal_Tiger.jpg" alt="Bengal Tiger">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : March – June</span><h3>Bengal Tiger</h3><p>The Bengal tiger is the national animal of India and one of the largest wild cats in the world. It lives in forests, grasslands, and mangrove ecosystems and is known for its powerful build and orange coat with black stripes. Major habitats include Sundarbans (West Bengal), Ranthambore (Rajasthan), and Jim Corbett National Park (Uttarakhand).</p></div>
+            </div>
+            <div class="item-card">
+                <img src="Snow_Leopard.jpg" alt="Snow Leopard">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Jan – March</span><h3>Snow Leopard</h3><p>The snow leopard is a rare and elusive big cat adapted to cold mountain environments with thick fur and powerful limbs. It lives in high-altitude rocky terrain and hunts animals like mountain goats and sheep. In India it occurs mainly in Ladakh, Himachal Pradesh, and Uttarakhand in the Himalayan region.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="Indian_Elephant.jpg" alt="Indian Elephant">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Nov – Apr</span><h3>Indian Elephant</h3><p>The Indian elephant is a large herbivore known for its intelligence and strong social groups. It lives in forests and grasslands where water and vegetation are abundant. In India it is mainly found in the Western Ghats (Kerala and Karnataka), Northeast India, and parts of Assam and Odisha.</p></div>
+            </div>
+            <div class="item-card">
+                <img src="Asiatic_Lion.jpeg" alt="Asiatic Lion">
+                <div class="item-body"><span class="badge bg-time">Best timings to visit : Dec – March</span><h3>Asiatic Lion</h3><p>The Asiatic lion is a powerful big cat known for its muscular body, shorter mane, and a visible fold of skin along its belly. It once lived across parts of Asia but today survives only in India. It is mainly found in Gir National Park and nearby forest areas in the state of Gujarat.</p></div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<!-- SKY PAGE -->
+<div id="page-sky" class="detail-view">
+    <div class="container">
+        <h1 class="page-title" style="color:var(--space)">Sky &amp; Space Wonders</h1>
+        <div class="sub-cat-title">Sky Wonders</div>
+        <div class="info-grid sky-grid">
+            <div class="item-card">
+               <img src="Atmospheric_Phenomena.jpeg" alt="Atmospheric Phenomena">
+               <div class="item-body"><h3>Atmospheric Phenomena</h3><p>Atmospheric phenomena are natural events happening in Earth’s atmosphere, including rainbows, halos around the Sun or Moon, lightning, and auroras.</p></div>
+            </div>
+            <div class="item-card">
+               <img src="Celestial_Events.jpeg" alt="Celestial Events">
+               <div class="item-body"><h3>Celestial Events</h3><p>Celestial events are special astronomical occurrences in the sky such as eclipses, meteor showers, and planetary alignments. These events attract sky watchers and scientists around the world.</p></div>
+            </div>
+            <div class="item-card">
+               <img src="Meteor_Phenomena.jpeg" alt="Meteor Phenomena">
+               <div class="item-body"><h3>Meteor Phenomena</h3><p>Meteor phenomena occur when small pieces of space rock enter Earth’s atmosphere and burn due to friction. These glowing streaks of light are commonly called shooting stars.</p></div> 
+            </div> 
+            <div class="item-card">
+               <img src="Cloud_Formations.jpg" alt="Cloud Formations">
+               <div class="item-body"><h3>Cloud Formations</h3><p>Cloud formations are patterns created when water vapor in the atmosphere condenses into tiny droplets or ice crystals. Different types like cumulus, cirrus, and stratus clouds form at different heights and create beautiful shapes in the sky.</p></div> 
+            </div> 
+        </div>  
+        <div class="sub-cat-title">Space Wonders</div>
+        <div class="info-grid space-grid">
+            <div class="item-card">
+               <img src="Cosmic_Phenomena.png" alt="Cosmic Phenomena">
+               <div class="item-body"><h3>Cosmic Phenomena</h3><p>Cosmic phenomena are large-scale events happening in space, such as supernova explosions, black holes, and galaxy collisions that reveal the dynamic nature of the universe</p></div>
+            </div>
+            <div class="item-card">  
+               <img src="Nebulae.png" alt="Nebulae">
+               <div class="item-body"><h3>Nebulae</h3><p>Nebulae are huge clouds of gas and dust in space where new stars are formed. They often glow with beautiful colors and are sometimes called stellar nurseries.</p></div>
+            </div>
+            <div class="item-card">
+               <img src="Star_Systems_Constellations.png" alt="Star Systems & Constellations">
+               <div class="item-body"><h3>Star Systems & Constellations</h3><p>A star system is a group of stars bound by gravity, while constellations are patterns of stars that form shapes in the night sky and help people identify regions of space.</p></div> 
+            </div> 
+            <div class="item-card">
+               <img src="Cosmic_Objects.jpg" alt="Cosmic Objects">
+               <div class="item-body"><h3>Cosmic Objects</h3><p>Cosmic objects include natural bodies found in space such as planets, stars, asteroids, comets, galaxies, and black holes that make up the universe.</p></div> 
+            </div> 
+        </div>  
+    </div>
+</div>  
+        
+<!-- GALLERY PAGE -->
+<div id="page-gallery" class="detail-view">
+    <div class="container">
+        <h1 class="page-title">Gallery — Real India</h1>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="Uppada_Beach.png" alt="Uppada Beach"><div class="gallery-label">Uppada Beach — Kakinada</div></div>
+            <div class="gallery-item"><img src="Rushikonda_Beach.jpg" alt="Rushikonda Beach"><div class="gallery-label">Rushikonda Beach — Vizag</div></div>
+            <div class="gallery-item"><img src="Om_Beach.jpg" alt="Om Beach"><div class="gallery-label">Om Beach — Gokarna</div></div>
+            <div class="gallery-item"><img src="Kovalam_Beach.jpg" alt="Kovalam Beach"><div class="gallery-label">Kovalam Beach — Kerala</div></div>
+            <div class="gallery-item"><img src="Palolem_Beach.jpg" alt="Palolem Beach"><div class="gallery-label">Palolem Beach — Goa</div></div>
+            <div class="gallery-item"><img src="Munnar_Kerala.jpg" alt="Munnar - Kerala"><div class="gallery-label">Munnar — Kerala</div></div>
+            <div class="gallery-item"><img src="Darjeeling.jpg" alt="Darjeeling"><div class="gallery-label">Darjeeling — West Bengal</div></div>
+            <div class="gallery-item"><img src="ooty.jpg" alt="Ooty"><div class="gallery-label">Ooty — Tamil Nadu</div></div>
+            <div class="gallery-item"><img src="Manali.jpg" alt="Manali"><div class="gallery-label">Manali — Himachal Pradesh</div></div>
+            <div class="gallery-item"><img src="Kodaikanal.png" alt="Kodaikanal"><div class="gallery-label">Kodaikanal — Tamil Nadu</div></div>
+            <div class="gallery-item"><img src="Chilika_Lake.jpg" alt="Chilika Lake"><div class="gallery-label">Chilika Lake — Odisha</div></div>
+            <div class="gallery-item"><img src="Araku_Valley.jpg" alt="Araku Valley"><div class="gallery-label">Araku Valley — Vizag</div></div>      
+        </div>
+    </div>    
+</div>
+    <!-- ABOUT PAGE -->
+    <div id="page-about" class="detail-view">
+        <div class="container">
+            <h1 class="page-title">About Us</h1>
+            <div class="about-box">
+
+                <div class="about-section">
+                    <div class="about-icon">🌿</div>
+                    <h2>Who We Are</h2>
+                    <p>Welcome to <strong>Nature's Soul Chronicles</strong> — your digital gateway to India's incredible wilderness. Our mission is to document the intricate beauty of India's ecosystems, from the Himalayas to the ocean.</p>
+                    <span class="about-tagline">Where Nature Speaks and Wonders Begin.</span>
+                </div>
+
+                <div class="about-divider"></div>
+
+                <div class="about-section">
+                    <div class="about-icon">🎯</div>
+                    <h2>Our Mission</h2>
+                    <p>Every mountain, river, forest, and starry Ladakh sky has a story worth telling. Through stunning visuals and rich content, we bring India's nature closer to you — inspiring conservation and wonder.</p>
+                </div>
+
+                <div class="about-divider"></div>
+
+                <div class="about-section">
+                    <div class="about-icon">👩‍💻</div>
+                    <h2>About the Creator</h2>
+                    <p>Hi! I am <strong>Bhavya Naga Sree</strong> 👋</p>
+                    <p>I am a Diploma student and a nature lover passionate about documenting India's incredible natural wonders through this website.</p>
+                </div>
+
+                <div class="about-divider"></div>
+
+                <div class="about-section">
+                    <div class="about-icon">📬</div>
+                    <h2>Contact Us</h2>
+                    <p>📧 <a href="mailto:naturesoulchronicles@gmail.com">naturesoulchronicles@gmail.com</a></p>
+                    <p>📍 Andhra Pradesh, India
+                        <img src="https://flagcdn.com/24x18/in.png" alt="India Flag" class="flag-img">
+                    </p>
+                </div>
+
+                <div class="about-divider"></div>
+
+                <div class="about-section">
+                    <div class="about-icon">🌐</div>
+                    <h2>Follow Us</h2>
+                    <p>Stay connected and explore more nature wonders with us!</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/naturesoulchronicles" target="_blank" class="social-btn instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                            Instagram
+                        </a>
+                        <a href="https://youtube.com/@naturessoulchronicles" target="_blank" class="social-btn youtube">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 3 12 3 12 3s-4.2 0-6.8.2c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.7 9.1.7 11.2v2c0 2 .3 4.1.3 4.1s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.2 21.5 12 21.5 12 21.5s4.2 0 6.8-.3c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.3-2.1.3-4.1v-2C23.3 9.1 23 7 23 7zM9.7 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>
+                            YouTube
+                        </a>
+                        <a href="https://www.facebook.com/share/1CTYGEoNij/" target="_blank" class="social-btn facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                            Facebook
+                        </a>
+                        <a href="https://x.com/NagasreeBh19420" target="_blank" class="social-btn twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            Twitter / X
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">Nature's Soul Chronicles</div>
+    <p>Where the Nature Speaks and Wonders Begin</p>
+    <p class="footer-copy">&#169; 2026 | Explore. Protect. Repeat.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
